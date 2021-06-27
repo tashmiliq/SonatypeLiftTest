@@ -1,1 +1,1 @@
-# Sonatype Lift EXtension Test
+# Sonatype Lift Extension Test
