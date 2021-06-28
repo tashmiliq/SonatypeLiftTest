@@ -44,7 +44,7 @@ void foo(char *p){
   #  residue: <JSON Value>?,
   #  pullRequest: PullRequest?   // Only valid when not a PR analysis
   #}
-}
+#}
 echo "[{ \"type\": \"str.c\", \
           \"name\": \"str.c\", \
      	  \"message\": \"model for $1 is generated.\", \
