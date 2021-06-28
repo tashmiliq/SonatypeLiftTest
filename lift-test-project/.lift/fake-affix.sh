@@ -29,6 +29,22 @@ void foo(char *p){
     return 0;
 }" > "$path/str.c"
 
+    # commit str.c
+    # create a
+    #PullRequest {
+    #title: Text,
+    #body: Text,
+    #target_branch: Text?,    // Default to the commit being analyzed
+    #source_commit: Text?   // Default to the current commit in the working directory
+
+    #Output Arguments:
+   #{
+  #  toolNotes: [ToolNote]?,
+  #  summary: Text?,
+  #  residue: <JSON Value>?,
+  #  pullRequest: PullRequest?   // Only valid when not a PR analysis
+  #}
+}
 echo "[{ \"type\": \"str.c\", \
           \"name\": \"str.c\", \
      	  \"message\": \"model for $1 is generated.\", \
@@ -45,6 +61,7 @@ function applicable() {
 function tellName() {
         emit "Affix"
 }
+
 
 function main() {
     if [ "$#" -ne 3 ]; then
